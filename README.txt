@@ -1,6 +1,6 @@
 Crete Guide mobile app
 
-The current project is a HTML-CSS3-JSCRIPT-JQUERY phone application. 
+The current project is a HTML-CSS3-JAVASCRIPT-JQUERY phone application. 
 
 Jquery plugin Mobilize Today TouchSlider it used in this project
 
