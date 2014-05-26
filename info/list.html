@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+        <div id="title"></div>
+        <div id="placeholder"></div>
+
+
+        <script src = "../js/jquery-1.6.2.min.js"></script>
+        <script src = "../js/asyncLoad.js"></script>
+
+        <script> //function to get URL parameters
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+			
+		
+        </script>
+
+        <script language="javascript">
+			
+			var goBack;
+			var startheaders = '<html><body>';
+			var endheaders = '</bod' + 'y></h' + 'tml>';
+			goBack = "<script>" + 'function goBack(){history.back();}' + '</scr' + 'ipt>';
+			
+
+            function doFunction(i) {
+                var header2 = '<h1 align="center"><id="clickme" onclick="goBack()"/><font size="10"><u>' + eval(query + '[i].name') + '</u></font></a></h1>';
+				var open2 = '<p  align="left" style="border:2px solid black"><id="clickYou" onclick="javascript:location.reload();"><font size="6" face="arial">';
+                var close2 = '</font></id="clickyou"></p><br/>';
+                var descrition = eval(query + '[i].description') ;
+                descrition = descrition.replace(/καιnbsp;/gi, ' ');
+                var description = startheaders + goBack + header2 + open2 + descrition + close2 + endheaders; 
+                document.write(description +  "<br/>");
+                document.close();
+            };
+
+            var query = getUrlVars()["query"];
+            var name = getUrlVars()["name"];
+            var fille = getUrlVars()["fille"];
+            name = name.replace(/%20/gi, ' ');
+            var fname = '../data/' + fille + '.js';
+            var header = '<h1 align="center"><a href = "../index.html#poi"><font size="10"><u>' + name + '</u></font></a></h1>'
+            document.getElementById("title").innerHTML = header;
+            asyncLoad(fname);
+        </script>
+
+        <script> // Show list
+            function run() {
+                var output = "";
+                var open = '<p  align="left" style="border:2px solid black"><id="clickMe" onclick="doFunction(';
+                var mid = ')";/><font size="6" face="arial">';
+                var close = '</a></font></p><br>';
+                for (var i in eval(query)) {
+                    output += open + i + mid + eval(query + '[i].name') + close;
+                }
+                document.getElementById("placeholder").innerHTML = output;
+            }
+        </script>
+    </body>
+</html>

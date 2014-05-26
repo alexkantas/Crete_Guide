@@ -1,0 +1,13 @@
+{
+  "name": "Crete Guide",
+  "description": "All about Crete",
+  "launch_path": "index.html",
+  "icons": {
+	"30": "/img/30.png",
+    "60": "/img/60.png",
+	"128": "/img/128.png"
+  },
+  "developer": {
+    "name": "Alex Kantas"
+  }
+}
