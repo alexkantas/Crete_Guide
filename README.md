@@ -1,5 +1,9 @@
-Crete Guide mobile app
+###Developed for [Hack4Med hackathon](https://twitter.com/hack4medcrete)
 
+###[Award winning app](https://twitter.com/Hack4MedCrete/status/468359399434895360)
+
+Crete Guide mobile app
+=======
 The current project is a HTML-CSS3-JAVASCRIPT-JQUERY phone application. 
 
 Jquery plugin Mobilize Today TouchSlider it used in this project.
@@ -10,8 +14,3 @@ You can you run the app by open the index.html or index-alternative.html. The di
 
 - If you want to go to previous menu tap the page's title
 - If you have problem with touchslider use the buttons at the bottom of the page
-
-Checked for proper running on :
-* Windows phone device ( with phonegap)
-* FirefoxOS simulator (manifest.webapp is for FirefoxOS apps)
-* Desktop Browsers
